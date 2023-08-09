@@ -11,7 +11,8 @@
   "author": "Gabriel",
   "license": "MIT",
   "dependencies": {
-    "vue": "^3.3.4"
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4"
   },
   "devDependencies": {
     "css-loader": "^6.8.1",

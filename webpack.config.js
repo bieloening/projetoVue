@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { VueLoaderPlugin } = require('vue-loader'); // Importe o VueLoaderPlugin
+const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
   entry: './src/main.js',
@@ -24,15 +24,16 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'index.html',
     }),
-    new VueLoaderPlugin(), // Adicione o VueLoaderPlugin aqui
+    new VueLoaderPlugin(),
   ],
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
     port: 8080,
+    historyApiFallback: true,
   },
   resolve: {
     alias: {
-      vue$: 'vue/dist/vue.esm.js',
+      vue$: 'vue/dist/vue.esm-bundler.js', 
     },
   },
 };
+
