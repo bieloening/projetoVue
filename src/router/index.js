@@ -1,9 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import EmptyPage from '../components/EmptyPage.vue'; // Importe o componente EmptyPage
+import EmptyPage from '../components/EmptyPage.vue';
+import Login from '../components/Login.vue'
 
 const routes = [
-  { path: '/', component: EmptyPage }, // Use o componente EmptyPage como rota padrão
-  // Defina outras rotas aqui
+  { path: '/', component: EmptyPage }, 
+  { path: '/login', component: Login},
 ];
 
 const router = createRouter({
